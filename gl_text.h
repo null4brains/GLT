@@ -22,7 +22,7 @@ freely, subject to the following restrictions:
 extern "C" {
 #endif
 
-void GLT_PrintChar(unsigned char *letter);
+void GLT_PrintChar(const unsigned char letter);
 void GLT_Print(const char *text);
 
 #ifdef __cplusplus

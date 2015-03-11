@@ -66,7 +66,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
 	default:
 		return DefWindowProc(hwnd, msg, wParam, lParam);
-    }
+	}
 
 	return 0;
 }
@@ -122,7 +122,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	int iFormat = ChoosePixelFormat(hDC, &pfd);
 	if(!iFormat)
-		Error("ChoosePixelFormat Failed");
+		return Error("ChoosePixelFormat Failed");
 
 	SetPixelFormat(hDC, iFormat, &pfd);
 	hRC = wglCreateContext(hDC);
